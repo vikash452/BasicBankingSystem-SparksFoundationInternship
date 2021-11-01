@@ -1,0 +1,15 @@
+{
+  "name": "bankingsystem",
+  "version": "1.0.0",
+  "description": "basic banking system",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "\u0016https://github.com/vikash452/BasicBankingSystem-SparksFoundationInternship.git"
+  },
+  "author": "vikash",
+  "license": "ISC"
+}
