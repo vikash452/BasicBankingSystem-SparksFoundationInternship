@@ -15,6 +15,7 @@ mongoose.connection.on('error',()=>{
     console.log('failed to connect to database')
 })
 
+app.use(bodyParser.json())
 app.use(require('./routes/app'))
 
 app.use(express.static('public'))

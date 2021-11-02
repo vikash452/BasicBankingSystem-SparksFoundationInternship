@@ -18,9 +18,6 @@ const transactionSchema = new mongoose.Schema({
         type:Number
     },
     status:{
-        type:Boolean
-    },
-    reason:{
         type:String
     },
     date_of_transaction:{

@@ -3,8 +3,15 @@ const userSchema = new mongoose.Schema({
     name:{
         type:String
     },
+    email:{
+        type:String,
+        unique:true
+    },
+    amount:{
+        type:Number
+    },
     accountNumber:{
-        type:Number,
+        type:String,
         unique:true,
         required:true
     },
