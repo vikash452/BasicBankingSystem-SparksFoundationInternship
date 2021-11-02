@@ -23,6 +23,18 @@ app.get('/',(req,res)=>{
     res.sendFile(__dirname + '/public/html/home.html')
 })
 
+app.get('/transfer',(req,res)=>{
+    res.sendFile(__dirname + '/public/html/transfer.html')
+})
+
+app.get('/customers',(req,res)=>{
+    res.sendFile(__dirname + '/public/html/customers.html')
+})
+
+app.get('/transaction',(req,res)=>{
+    res.sendFile(__dirname + '/public/html/transaction.html')
+})
+
 app.get('*',(req,res)=>{
     res.sendFile(__dirname + '/public/html/home.html')
 })

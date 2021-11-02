@@ -19,20 +19,6 @@
 </head>
 <body>
 
-    <!-- <div class="collapse" id="navbarTogglerDemo01">
-        <div class="bg-dark p-4">
-          <h5 class="text-white h4">Collapsed content</h5>
-          <span class="text-muted">Toggleable via the navbar brand.</span>
-        </div>
-      </div>
-      <nav class="navbar navbar-dark bg-dark">
-        <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
-      </nav> -->
-
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         
         <div class="container-fluid">
@@ -41,34 +27,34 @@
           </button>
 
           <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <a class="navbar-brand" href="#home">
+            <a class="navbar-brand" href="#">
                 <img src="../assets/bank7.jpg" height="50px" width="50px"/>
             </a>
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">
+                <a class="nav-link" aria-current="page" href="#services-container">
                     Our Services
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">
+                <a class="nav-link" aria-current="page" href="/customers">
                     View Customers
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">
+                <a class="nav-link" aria-current="page" href="/transaction">
                     Transaction History
                 </a>
               </li>
               
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">
+                <a class="nav-link" aria-current="page" href="/transfer">
                     Send Money
                 </a>
               </li>
               
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">
+                <a class="nav-link" aria-current="page" href="#footer">
                     Contact Us
                 </a>
               </li>
@@ -81,9 +67,7 @@
 
         </div>
 
-    </nav>
-    
-      
+    </nav>    
 
     <div id="home" class="swiper">
         <!-- Additional required wrapper -->
@@ -129,15 +113,99 @@
         <h4>
             The bank that gives you more
         </h4>
-
-        <a href="#features">
-            Button
-        </a>
         
     </div>
 
-    <div id="features">
-        here are the features
+    <div id="services-container">
+      <div class="service">
+
+        <div style="width: 35%;">
+          <div class="service-heading">
+            Send Money
+          </div>
+          <div>
+            
+            We provide 24x7 money transfer technology so that your loved ones never run 
+            out of currency. The amount transfer technology is extremely safe and fast
+            and ensures instant payment to the beneficiary.
+
+          </div>
+        </div>
+        
+        
+        <div>
+          <img src="../assets/send money.jpg" height="400px" width="500px" />
+        </div>
+
+      </div>
+      
+      <div class="service">
+
+        <div>
+          <img src="../assets/transaction.jpg" height="400px" width="500px" />
+        </div>
+        
+        <div style="width: 35%;">
+          <div class="service-heading">
+            Transaction 
+          </div>
+          <div>
+            We keep all transaction history safely in our database. All the records are
+            publicly available. This ensures easy redressal of grievances and maintains transparency
+            in terms of transactions in an account.
+          </div>
+        </div>
+        
+        
+      </div>
+      
+      <div class="service">
+        <div style="width: 35%;">
+          <div class="service-heading">
+            Customers
+          </div>
+          <div>
+            We have a record of each and every customer registered in our banking 
+            system. The list is available on the bank website and can be easily 
+            accessed.
+          </div>
+        </div>
+        
+        <div>
+          <img src="../assets/customers.jpg" height="400px" width="500px" />
+        </div>
+
+      </div>
+
+    </div>
+
+    <div id="footer">
+      <div>
+        <img src="../assets/bank7.jpg" width="150px" height="150px" 
+        style="border-radius: 25px; 
+        margin-top: 4%; 
+        margin-bottom: 4%;" />
+      </div>
+
+      <div style="color: white;">
+        <img src="../assets/location_on_white_36dp.svg" />
+        12, Ford Street
+        <br/>
+        New XYZ, ABC Street,
+        <br/>
+        Wellington City,
+        <br/>
+        Antarctica
+      </div>
+
+      <div style="color: white;">
+        <img src="../assets/contact_mail_white_24dp.svg" width="50px" height="50px" />
+        <br/>
+        +1234567890
+        <br/>
+        abc@def.com
+      </div>
+
     </div>
 
 </body>
