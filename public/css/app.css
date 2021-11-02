@@ -1,0 +1,15 @@
+.swiper {
+    margin-top: 2%;
+    /* width: 1000px ; */
+    height: 300px;
+}
+
+body{
+    background-color: #f3e6ff;
+    font-family: 'Zen Antique', serif;
+}
+
+.bankHeading{
+    text-align: center;
+    margin-top: 5%;
+}
