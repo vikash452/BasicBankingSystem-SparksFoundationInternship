@@ -7,6 +7,8 @@
 body{
     /* background-color: #f3e6ff; */
     font-family: 'Zen Antique', serif;
+    min-height: 100vh;
+    position: relative;
 }
 
 .bankHeading{
@@ -42,4 +44,13 @@ body{
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width:950px){
+    .service{
+        flex-direction: column;
+    }
 }
