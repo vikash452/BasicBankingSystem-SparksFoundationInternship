@@ -1,5 +1,5 @@
 .swiper {
-    margin-top: 2%;
+    margin-top: 8%;
     /* width: 1000px ; */
     height: 300px;
 }
@@ -12,4 +12,8 @@ body{
 .bankHeading{
     text-align: center;
     margin-top: 5%;
+}
+
+#features{
+    margin-top: 50%;
 }
