@@ -15,7 +15,8 @@ const transactionSchema = new mongoose.Schema({
         type:String
     },
     amount_transferred:{
-        type:Number
+        type:Number,
+        default:0
     },
     status:{
         type:String
