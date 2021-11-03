@@ -11,7 +11,12 @@ router.get('/transactionList',async(req,res)=>{
     try{
         // console.log('working fine')
         var result = await Transaction.find()
-        console.log(result)
+        // console.log(result)
+        result.sort(function(a,b){
+            // Turn your strings into dates, and then subtract them
+            // to get a value that is either negative, positive, or zero.
+            return new Date(b.date_of_transaction) - new Date(a.date_of_transaction);
+          });
         return res.status(200).json({isError:false, data:result})
     }catch(error){
         console.log(error.message)
@@ -101,6 +106,22 @@ router.put('/transferMoney',async(req,res)=>{
 
         var savedTransaction = await newTransaction.save()
         return res.status(200).json({isError:false, data:savedTransaction})
+
+    }catch(error){
+        console.log(error.message)
+        return res.status(400).json({isError:true, message:error.message})
+    }
+})
+
+router.get('/getUserData/:acc', async(req,res)=>{
+    try{
+        var acc = req.params.acc
+        var customer = await User.findOne({accountNumber : acc})
+
+        if(!customer || customer == null || customer == undefined)
+        throw new Error('User not found')
+        
+        return res.status(200).json({isError:false, data:customer})
 
     }catch(error){
         console.log(error.message)

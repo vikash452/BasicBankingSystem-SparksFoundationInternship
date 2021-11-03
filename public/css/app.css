@@ -66,10 +66,20 @@ body{
 
 .grid-container{
     display: grid;
-    grid-template-columns:70% 30%
+    grid-template-columns:60% 40%
 }
 
 .grid-item{
     margin-top: 1%;
     margin-bottom: 1%;
+}
+
+.transaction-container{
+    display: grid;
+    grid-template-columns: 10% 15% 10% 15% 15% 15% 20%;
+    margin-top: 20%;
+}
+
+.transaction-item{
+    border: black 1px solid;
 }
