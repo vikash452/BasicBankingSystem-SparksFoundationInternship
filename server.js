@@ -5,8 +5,8 @@ const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 require('dotenv').config()
 
-mongoose.connect('mongodb://localhost:27017/BankingSystem',{useNewUrlParser:true,useUnifiedTopology:true});
-// mongoose.connect(process.env.MONGO_URL,{useNewUrlParser:true,useUnifiedTopology:true});
+// mongoose.connect('mongodb://localhost:27017/BankingSystem',{useNewUrlParser:true,useUnifiedTopology:true});
+mongoose.connect(process.env.MONGO_URL,{useNewUrlParser:true,useUnifiedTopology:true});
 
 mongoose.connection.on('connected',()=>{
     console.log('connected to database')
