@@ -23,7 +23,7 @@ const transactionSchema = new mongoose.Schema({
     },
     date_of_transaction:{
         type:Date,
-        default:Date.now()
+        default:Date.now
     }
 })
 
