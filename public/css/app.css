@@ -112,3 +112,13 @@ body{
 .customer-item.heading{
     background-color: burlywood;
 }
+
+#makeAscending{
+    cursor: pointer;
+    font-size: 18px;
+}
+
+#makeDescending{
+    cursor: pointer;
+    font-size: 18px;
+}

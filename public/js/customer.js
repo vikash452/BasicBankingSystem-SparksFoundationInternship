@@ -1,6 +1,9 @@
-document.addEventListener('DOMContentLoaded',async ()=>{
-    var data = await fetch('/userList/default').then(res=>res.json())
-    console.log(data.data)
+var order = 'default'
+
+async function loadContent()
+{
+    var data = await fetch(`/userList/${order}`).then(res=>res.json())
+    // console.log(data.data)
 
     var customerContainer = document.querySelector('.customer-container');
 
@@ -33,14 +36,32 @@ document.addEventListener('DOMContentLoaded',async ()=>{
         customerContainer.appendChild(accountDiv);
         customerContainer.appendChild(amountDiv);
     });
+}
+
+document.addEventListener('DOMContentLoaded',async ()=>{
+    loadContent();
 })
 
-document.querySelector('.re').addEventListener('click',()=>{
-    
+document.getElementById('makeAscending').addEventListener('click', async ()=>{
     var customerContainer = document.querySelector('.customer-container');
+    order  = 'asc'
     
     while(customerContainer.childNodes.length > 8)
     {
         customerContainer.removeChild(customerContainer.childNodes[8]);
     }
+
+    loadContent();
+})
+
+document.getElementById('makeDescending').addEventListener('click', async ()=>{
+    var customerContainer = document.querySelector('.customer-container');
+    order  = 'desc'
+    
+    while(customerContainer.childNodes.length > 8)
+    {
+        customerContainer.removeChild(customerContainer.childNodes[8]);
+    }
+
+    loadContent();
 })
