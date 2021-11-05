@@ -116,6 +116,7 @@ async function sendMoney()
     if(data.isError)
     {
         window.alert(data.message)
+        return;
     }
 
     // console.log(data)

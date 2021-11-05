@@ -48,9 +48,33 @@ router.post('/addUser',async(req,res)=>{
     }
 })
 
-router.get('/userList',async(req,res)=>{
+router.get('/userList/:order',async(req,res)=>{
     try{
-        var result = await User.find()
+        
+        var order = req.params.order
+        var agg = [];
+
+        if(order == 'default')
+        {
+            var result = await User.find()
+            return res.status(200).json({isError:false, data:result})
+        }
+
+        if(order == 'asc')
+        {
+            agg.push({
+                $sort:{amount:1}
+            })
+        }
+        else if(order == 'desc')
+        {
+            agg.push({
+                $sort:{amount:-1}
+            })
+        }
+        
+        var result = await User.aggregate(agg)
+        
         return res.status(200).json({isError:false, data:result})
     }catch(error){
         console.log(error.message)
